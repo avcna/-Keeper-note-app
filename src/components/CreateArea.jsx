@@ -7,6 +7,8 @@ function CreateArea({onAdd}) {
         content:""
     });
 
+    const [isExpand,setExpand] = useState(false);
+
     function handleChange(e){
         const {name, value} = e.target;
         setNote(prevNote =>{
@@ -24,11 +26,16 @@ function CreateArea({onAdd}) {
         e.preventDefault();
 
     }
+
+    function expand(){
+      setExpand(true);
+    }
+
   return (
     <div>
       <form>
-        <input name="title" onChange={handleChange} value={note.title} placeholder="Title" />
-        <textarea name="content" onChange={handleChange} value={note.content} placeholder="Take a note..." rows="3" />
+        {isExpand ? <input name="title" onChange={handleChange} value={note.title} placeholder="Title" /> : null}
+        <textarea name="content" onClick={expand} onChange={handleChange} value={note.content} placeholder="Take a note..." rows={isExpand ? "3" : "1"} />
         <button onClick={submitNote}>Add</button>
       </form>
     </div>

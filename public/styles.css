@@ -43,6 +43,11 @@ footer p {
   width: 240px;
   margin: 16px;
   float: left;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  
 }
 .note h1 {
   font-size: 1.1em;
@@ -64,7 +69,7 @@ footer p {
   cursor: pointer;
   outline: none;
   font-size: 12px;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 form {

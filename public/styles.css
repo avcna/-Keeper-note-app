@@ -106,3 +106,23 @@ form button {
   outline: none;
 }
 
+@media only screen and (max-width: 500px) {
+  div form {
+    width: 300px;
+  }
+
+  .note {
+    width: 150px;
+  }
+  .note p,
+  .note h1{
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form textarea {
+  font-size: 1rem;
+}
+
+}
+
